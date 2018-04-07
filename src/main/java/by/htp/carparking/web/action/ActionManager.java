@@ -5,6 +5,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 import by.htp.carparking.web.action.impl.CarListViewAction;
+import by.htp.carparking.web.action.impl.OrderCarAction;
+import by.htp.carparking.web.action.impl.ReturnCarAction;
 
 public final class ActionManager {
 
@@ -16,6 +18,8 @@ public final class ActionManager {
 	static {
 		actions = new HashMap<>();
 		actions.put(ACTION_NAME_VIEW_CAR_LIST, new CarListViewAction());
+		actions.put(ACTION_NAME_ORDER_CAR, new OrderCarAction());
+		actions.put(ACTION_NAME_RETURN_CAR, new ReturnCarAction());
 	}
 
 	public static BaseAction getAction(String action) {
