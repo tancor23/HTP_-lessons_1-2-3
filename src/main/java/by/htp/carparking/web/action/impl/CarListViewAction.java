@@ -17,6 +17,7 @@ public class CarListViewAction implements BaseAction {
 	public String executeAction(HttpServletRequest request) {
 
 		List<Car> cars = carService.getCarsList();
+		
 		request.setAttribute(REQUEST_PARAM_CAR_LIST, cars);
 
 		return PAGE_USER_MAIN;
